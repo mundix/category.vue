@@ -13,12 +13,12 @@ class CreateCategoires extends Seeder
      */
     public function run()
     {
-        /$categories = [
-        "Foods"=>["Breakfast","Meals","Dinner"],
-        "Sports"=>["Baseball","Basketball","Tennis",'Football Soccer'],
-        "Hobbies" => ["Painting","Driving","Swimming","Running"],
-        "Companies" => ["Apple","Microsoft","IMB","Intel"],
-    ];
+        $categories = [
+            "Foods"=>["Breakfast","Meals","Dinner"],
+            "Sports"=>["Baseball","Basketball","Tennis",'Football Soccer'],
+            "Hobbies" => ["Painting","Driving","Swimming","Running"],
+            "Companies" => ["Apple","Microsoft","IMB","Intel"],
+        ];
         foreach($categories as $parentName => $categoryChildren)
         {
             $cat = new Category();
