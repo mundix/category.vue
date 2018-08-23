@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->integer('parent_id')->unsigned()->index();
             $table->text('description')->nullable();
+            $table->enum('status',['enable','disable']);
             $table->timestamps();
 
             $table->foreign('parent_id')
