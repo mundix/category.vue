@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 
 use App\Category;
 
-class CreateCategoires extends Seeder
+class CreateCategories extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,9 @@ class CreateCategoires extends Seeder
      */
     public function run()
     {
+        \Schema::disableForeignKeyConstraints();
+
+        Category::truncate();
         $categories = [
             "Foods"=>["Breakfast","Meals","Dinner"],
             "Sports"=>["Baseball","Basketball","Tennis",'Football Soccer'],
@@ -33,5 +36,7 @@ class CreateCategoires extends Seeder
                 $cat->children()->save($child);
             }
         }
+
+        \Schema::enableForeignKeyConstraints();
     }
 }

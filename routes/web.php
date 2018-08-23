@@ -19,4 +19,4 @@ Route::get('/', function () {
 /**
  * Testing
 */
-Route::get('test','TestingController@category')->name('test');
+Route::get('categories','TestingController@category')->name('categories');
