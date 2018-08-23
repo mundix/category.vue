@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+/**
+ * Testing
+*/
+Route::get('test','TestingController@category')->name('test');
